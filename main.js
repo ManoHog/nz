@@ -93,13 +93,6 @@ const STOPS = [
     }];
 
 
-console.log (STOPS)
-console.log (STOPS[0]);
-console.log (STOPS[1]);
-console.log (STOPS[2]);
-console.log (STOPS.length);
-
-
 let map = L.map('map').setView([stop_lat, stop_lng], zoom);
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -109,4 +102,13 @@ let map = L.map('map').setView([stop_lat, stop_lng], zoom);
     L.marker([stop_lat, stop_lng]).addTo(map)
         .bindPopup(title)
         .openPopup();
-        
+      
+for (let stop of STOPS){
+    //console.log (stop);
+    console.log (stop.title);
+    console.log (stop.user);
+    console.log (stop.lat);
+    console.log (stop.lng);
+    console.log (stop.wikipedia);
+
+}       
