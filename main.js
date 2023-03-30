@@ -98,10 +98,13 @@ let map = L.map('map').setView([stop_lat, stop_lng], zoom);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
+    L.tileLayer.provider('Stamen.Watercolor').addTo(map);
           
 for (let stop of STOPS){
     //Marker für den Stop
-    let marker = L.marker([stop.lat, stop.lng]);
+    let marker = L.marker([stop.lat, stop.lng], {
+        opacity: 0.5,
+    });
     marker.addTo(map)
     marker.bindPopup(`<h3>${stop.title}</h3>
     <a href="${stop.wikipedia}">Wikipedia</a>
@@ -111,3 +114,7 @@ for (let stop of STOPS){
     }
 
 }     
+L.control.scale({
+    imperial: false, 
+    position: "bottomright"
+}).addTo(map); 
