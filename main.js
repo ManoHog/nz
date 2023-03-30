@@ -1,6 +1,6 @@
 let stop_lat = -43.531111;
 let stop_lng = 172.636667;
-let zoom = 4;
+let zoom = 7;
 let title = 'Christchurch';
 
 const STOPS = [
@@ -101,14 +101,13 @@ let map = L.map('map').setView([stop_lat, stop_lng], zoom);
           
 for (let stop of STOPS){
     //Marker für den Stop
-    console.log (stop.title);
-    console.log (stop.user);
-    console.log (stop.lat);
-    console.log (stop.lng);
-    console.log (stop.wikipedia);
-
-    L.marker([stop.lat, stop.lng]).addTo(map)
-    .bindPopup(stop.title)
-    .openPopup();
+    let marker = L.marker([stop.lat, stop.lng]);
+    marker.addTo(map)
+    marker.bindPopup(`<h3>${stop.title}</h3>
+    <a href="${stop.wikipedia}">Wikipedia</a>
+    `);
+    if (stop.user == "manohog") {
+        marker.openPopup()
+    }
 
 }     
