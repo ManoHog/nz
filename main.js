@@ -120,5 +120,5 @@ for (let stop of STOPS){
 }     
 L.control.scale({
     imperial: false, 
-    position: "bottomright"
+    position: "bottomleft"
 }).addTo(map); 
