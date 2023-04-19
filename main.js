@@ -97,11 +97,15 @@ let map = L.map('map').setView([stop_lat, stop_lng], zoom);
 
     
     let watercolor = L.tileLayer.provider('Stamen.Watercolor');
-    let osm = L.tileLayer.provider('OpenStreetMap.Mapnik').addTo(map);
+    let osm = L.tileLayer.provider('OpenStreetMap.Mapnik');
+    let topographic = L.titleLayer.provider('OpenTopoMap');
+    let Esri.World = L.titleLayer.provider('Esri.WorldImagery').addTo(map);
 
     L.control.layers({
         "Openstreetmap": osm,
         "Watercolor": watercolor
+        "OpenTopoMap": topographic
+        "Esri.WorldImagery": Esri.World
     }).addTo (map)
           
 for (let stop of STOPS){
