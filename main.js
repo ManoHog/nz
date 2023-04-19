@@ -125,4 +125,6 @@ for (let stop of STOPS) {
 L.control.scale({
     imperial: false,
     position: "bottomleft"
-}).addTo(map); 
+}).addTo(map);
+
+map.addControl(new L.Control.Fullscreen());
