@@ -95,20 +95,20 @@ const STOPS = [
 
 let map = L.map('map').setView([stop_lat, stop_lng], zoom);
 
-    
-    let watercolor = L.tileLayer.provider('Stamen.Watercolor');
-    let osm = L.tileLayer.provider('OpenStreetMap.Mapnik');
-    let topographic = L.tileLayer.provider('OpenTopoMap');
-    let Esri_World = L.tileLayer.provider('Esri.WorldImagery').addTo(map);
 
-    L.control.layers({
-        "Openstreetmap": osm,
-        "Watercolor": watercolor,
-        "OpenTopoMap": topographic,
-        "Esri.WorldImagery": Esri_World
-    }).addTo(map)
-          
-for (let stop of STOPS){
+let watercolor = L.tileLayer.provider('Stamen.Watercolor');
+let osm = L.tileLayer.provider('OpenStreetMap.Mapnik');
+let topographic = L.tileLayer.provider('OpenTopoMap');
+let Esri_World = L.tileLayer.provider('Esri.WorldImagery').addTo(map);
+
+L.control.layers({
+    "Openstreetmap": osm,
+    "Watercolor": watercolor,
+    "OpenTopoMap": topographic,
+    "Esri.WorldImagery": Esri_World
+}).addTo(map)
+
+for (let stop of STOPS) {
     //Marker für den Stop
     let marker = L.marker([stop.lat, stop.lng], {
         opacity: 1,
@@ -121,8 +121,8 @@ for (let stop of STOPS){
         marker.openPopup()
     }
 
-}     
+}
 L.control.scale({
-    imperial: false, 
+    imperial: false,
     position: "bottomleft"
 }).addTo(map); 

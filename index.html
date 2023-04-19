@@ -1,64 +1,81 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
-    
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
-<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.13.0/leaflet-providers.min.js" integrity="sha512-5EYsvqNbFZ8HX60keFbe56Wr0Mq5J1RrA0KdVcfGDhnjnzIRsDrT/S3cxdzpVN2NGxAB9omgqnlh4/06TvWCMw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="main.js" defer></script>
-<link rel="stylesheet" href="main.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.13.0/leaflet-providers.min.js"
+        integrity="sha512-5EYsvqNbFZ8HX60keFbe56Wr0Mq5J1RrA0KdVcfGDhnjnzIRsDrT/S3cxdzpVN2NGxAB9omgqnlh4/06TvWCMw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Neuseelandreise</title>
 </head>
+
 <body>
 
-<header>
-    <img class= "shadow" src="images/header.jpg" alt="Schafe in der Landschaft ">
-    <a href= https://github.com/manohog"><!-- Bildquelle: https://pixabay.com/de/photos/kea-bergpapagei-papagei-neuseeland-2141343/ -->
-        <img src="images/userbild.jpg" alt="Schnabel">
-    </a>
-</header>
+    <header>
+        <img class="shadow" src="images/header.jpg" alt="Schafe in der Landschaft ">
+        <a href=https://github.com/manohog">
+            <!-- Bildquelle: https://pixabay.com/de/photos/kea-bergpapagei-papagei-neuseeland-2141343/ -->
+            <img src="images/userbild.jpg" alt="Schnabel">
+        </a>
+    </header>
 
-<main>
-    <article>
-        <h1>Neuseelandreise</h1> 
-        <h2><em>Christchurch</em></h2>
-        <p>Christchurch (ˈkrʌɪsttʃəːtʃ, Māori: Ōtautahi), offiziell Christchurch City (auch als Garden City bekannt) genannt, ist die größte Stadt auf der Südinsel von <strong>Neuseeland</strong> und zugleich eine eigenständige Gebietskörperschaft in der Region Canterbury.</p>
-        (Quelle: <a href="https://de.wikipedia.org/wiki/Christchurch">Wikipedia</a> )
+    <main>
+        <article>
+            <h1>Neuseelandreise</h1>
+            <h2><em>Christchurch</em></h2>
+            <p>Christchurch (ˈkrʌɪsttʃəːtʃ, Māori: Ōtautahi), offiziell Christchurch City (auch als Garden City bekannt)
+                genannt, ist die größte Stadt auf der Südinsel von <strong>Neuseeland</strong> und zugleich eine
+                eigenständige Gebietskörperschaft in der Region Canterbury.</p>
+            (Quelle: <a href="https://de.wikipedia.org/wiki/Christchurch">Wikipedia</a> )
 
-        <figure class="shadow">
-         <img src="images/attraction.jpg" alt="College in Christchurch">
-         <figcaption> <i class="fa-sharp fa-solid fa-camera-retro"></i>Altes College in Christchurch (Quelle: <a href="https://pixabay.com/de/photos/neuseeland-christchurch-4827784/">Makalu</a>) </figcaption>
-         
-    
-     
-        </figure>
-     
-        <h3>Übersichtskarte</h3>
-        <div id="map" class=" shadow" style="width: 90%;height: 600px;border: 1px solid silver; margin: auto"></div>
-     
-        <h3>Links</h3>
-        <ul> 
-         <li> <a href= "https://de.wikipedia.org/wiki/Christchurch"> Wikipediaeintrag Christchurch</a></li>
-         <li> <a href= "https://de.wikipedia.org/wiki/Christchurch#Kultur"> Wikipediaeintrag Christchurch Kultur</a></li>
-         <li> <a href= "https://de.wikipedia.org/wiki/Christchurch#Bev%C3%B6lkerung"> Wikipediaeintrag Christchurch Bevölkerung</a></li>
-         
-         </ul>
-     
-     
-    </article>
-</main>
-<footer>
-    <nav>
-        <a href="https://madeleinehll.github.io/nz/"><i class="fa-sharp fa-solid fa-arrow-left-long"></i>vorhergehende Etappe</a>
-        <span> Christchurch</span>
-        <a href="https://chris0810.github.io/nz/">nächste Etappe<i class="fa-sharp fa-solid fa-arrow-right-long"></i></a>
+            <figure class="shadow">
+                <img src="images/attraction.jpg" alt="College in Christchurch">
+                <figcaption> <i class="fa-sharp fa-solid fa-camera-retro"></i>Altes College in Christchurch (Quelle: <a
+                        href="https://pixabay.com/de/photos/neuseeland-christchurch-4827784/">Makalu</a>) </figcaption>
 
-   </nav>
 
-</footer>
- 
+
+            </figure>
+
+            <h3>Übersichtskarte</h3>
+            <div id="map" class=" shadow" style="width: 90%;height: 600px;border: 1px solid silver; margin: auto"></div>
+
+            <h3>Links</h3>
+            <ul>
+                <li> <a href="https://de.wikipedia.org/wiki/Christchurch"> Wikipediaeintrag Christchurch</a></li>
+                <li> <a href="https://de.wikipedia.org/wiki/Christchurch#Kultur"> Wikipediaeintrag Christchurch
+                        Kultur</a></li>
+                <li> <a href="https://de.wikipedia.org/wiki/Christchurch#Bev%C3%B6lkerung"> Wikipediaeintrag
+                        Christchurch Bevölkerung</a></li>
+
+            </ul>
+
+
+        </article>
+    </main>
+    <footer>
+        <nav>
+            <a href="https://madeleinehll.github.io/nz/"><i
+                    class="fa-sharp fa-solid fa-arrow-left-long"></i>vorhergehende Etappe</a>
+            <span> Christchurch</span>
+            <a href="https://chris0810.github.io/nz/">nächste Etappe<i
+                    class="fa-sharp fa-solid fa-arrow-right-long"></i></a>
+
+        </nav>
+
+    </footer>
+
 </body>
+
 </html>
